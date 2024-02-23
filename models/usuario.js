@@ -19,7 +19,7 @@ const UsuarioSchema = Schema ({
     role:{
         type: String,
         required: true,
-        enum: ["ADMIN_ROLE", "USER_ROLE"]
+        enum: ["ADMIN_ROLE",]
     },
     estado:{
         type: Boolean,
@@ -30,5 +30,6 @@ const UsuarioSchema = Schema ({
         default: false
     }
 });
+
 
 module.exports = model('Usuario', UsuarioSchema);
