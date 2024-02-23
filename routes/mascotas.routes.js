@@ -1,34 +1,24 @@
-const { Schema, model} = require('mongoose');
+const { Router } = require('express');
+const { check } = require('express-validator');
+ 
+const { validarCampos } = require('../middlewares/validar-campos');
+const { mascotasPost, } = require('../controllers/mascotas.controller');
+const { existeMascotaById } = require('../helpers/db-validators');
+ 
+const router = Router();
+ 
 
-const UsuarioSchema = Schema ({
-    especieDeMascota: {
-        type: String,
-        required: [true, 'El nombre es obligatorio']
-    },
-    raza: {
-        type: String,
-        required: [true, 'La raza es obligatorio']
-    },
-    color: {
-        type: String,
-        required: [true]
-    },
-    estadoAdoc:{
-        type: String,
-        required: [true]
-    },
-    edad: {
-        type: String,
-        required: [true, 'La edad es obligatorio']
-    },
-    sexo:{
-        type: String,
-        required: [true]
-    },
-    estado:{
-        type: Boolean,
-        default: true
-    }
-});
+router.post(
+    "/",
+    [
+        check("nombre", "El nombre es obligatorio").not().isEmpty(),
+        check("raza", "La raza es obligatorio").not().isEmpty(),
+        check("estadoAdoptado", "El estado adoptado es obligatorio").not().isEmpty(),
+        check("edad", "La edad es obligatoria").not().isEmpty(),
+        check("sexo", "El sexo es obligatorio").not().isEmpty(),
+        validarCampos,
+    ], mascotasPost);
 
-module.exports = model('Mascota', UsuarioSchema);
+
+ 
+module.exports = router;
