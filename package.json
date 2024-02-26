@@ -8,7 +8,7 @@
     "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": " Ignacio José Iboy",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
