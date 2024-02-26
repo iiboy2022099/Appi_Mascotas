@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Mascotas",
+    "dateExported": "2024-02-26T03:10:57.043Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7fca082f-d2e5-437d-a279-9996bb6b7784",
+            "colId": "3d965829-16c6-487b-b225-d899f18c7632",
+            "containerId": "",
+            "name": "mascotasPost",
+            "url": "http://localhost:3000/api/mascotas",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-26T01:55:03.979Z",
+            "modified": "2024-02-26T03:10:03.645Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Leon\",\n  \"raza\":\"Barcino, gato \",\n  \"estadoAdoptado\": \"En adopcion\",\n  \"edad\": \"2 años\",\n  \"sexo\":\"macho\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "95285fd0-8d72-4f89-a3e4-1f82fb81696c",
+            "colId": "3d965829-16c6-487b-b225-d899f18c7632",
+            "containerId": "",
+            "name": "mascotasGet",
+            "url": "http://localhost:3000/api/mascotas",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-26T02:34:53.529Z",
+            "modified": "2024-02-26T02:35:08.387Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "561b717b-54ee-464f-8b65-69b4c1e3ace6",
+            "colId": "3d965829-16c6-487b-b225-d899f18c7632",
+            "containerId": "",
+            "name": "getMascotaByid",
+            "url": "http://localhost:3000/api/mascotas/65dbf2458793921f3f06bade",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-26T02:37:40.154Z",
+            "modified": "2024-02-26T03:10:27.563Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "161327ed-738c-4509-8e36-7709a00f8da7",
+            "colId": "3d965829-16c6-487b-b225-d899f18c7632",
+            "containerId": "",
+            "name": "mascotasPut",
+            "url": "http://localhost:3000/api/mascotas/65dbf2458793921f3f06bade",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-26T02:52:31.153Z",
+            "modified": "2024-02-26T03:10:40.521Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"edad\":\"9 años\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "01102339-9f08-4bbc-a366-8b219ca05f18",
+            "colId": "3d965829-16c6-487b-b225-d899f18c7632",
+            "containerId": "",
+            "name": "mascotasDelete",
+            "url": "http://localhost:3000/api/mascotas/65dbf65b8793921f3f06bae0",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-02-26T03:06:59.719Z",
+            "modified": "2024-02-26T03:07:26.383Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

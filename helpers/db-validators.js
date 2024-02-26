@@ -1,5 +1,6 @@
 const Usuario = require('../models/usuario');
 const Role = require('../models/role');
+const Mascota = require('../models/mascotas');
 
 const existenteEmail = async (correo = '') => {
     const existeEmail = await Usuario.findOne({correo});
